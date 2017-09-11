@@ -1,4 +1,7 @@
 # ng-multi-components
 
-1.  This app is created using Angular-CLI.
-2.  Bootstrap library was used for styling.
+This app is created using Angular-CLI.
+
+and CSS library: Bootstrap is being used for styling.
+
+
