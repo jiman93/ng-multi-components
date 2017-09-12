@@ -8,20 +8,23 @@
       type="text"
       class="form-control"
       #serverNameInput>
-      <!--Getting the value from input field using refrence variable, # -->
+      <!--Getting the value from input field using refrence variable, #serverNameInput -->
     
     <label>Server Content</label>
     <input
       type="text"
       class="form-control"
       #serverContentInput>
+       <!--Getting the value from input field using refrence variable, #serverContentInput -->
     <br>
     
     <button
       class="btn btn-success"
       (click)="onAddServer(serverNameInput)">Add Server</button>
+      <!-- click event triggering onAddserver method-->
     <button
       class="btn btn-success"
       (click)="onAddBlueprint(serverNameInput)">Add Server Blueprint</button>
+      <!-- click event triggering onAddBlueprint method-->
   </div>
 </div>

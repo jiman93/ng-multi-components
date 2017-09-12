@@ -1,5 +1,5 @@
 import {
-  Component, OnInit, Input, ViewChild, ElementRef, ContentChild 
+  Component, Input, ViewChild, ElementRef, ContentChild 
 } from '@angular/core';
 
 @Component({
@@ -11,4 +11,5 @@ export class ServerElementComponent {
   @Input() name: string;
   @ViewChild('heading') header: ElementRef;
   @ContentChild('contentParagraph') paragraph: ElementRef;
+  
 }

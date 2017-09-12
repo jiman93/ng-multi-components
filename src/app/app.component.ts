@@ -6,8 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  // initializing serverElements model with a testing data
   serverElements = [{type: 'server', name: 'Testserver', content: 'Just a test!'}];
 
+  // onServerAdded method logics triggered when Add Server button clicked
   onServerAdded(serverData: {serverName: string, serverContent: string}) {
     this.serverElements.push({
       type: 'server',
@@ -16,6 +18,7 @@ export class AppComponent {
     });
   }
 
+  // onBlueprintAdded method logics triggered when Add Server Blueprint button clicked
   onBlueprintAdded(blueprintData: {serverName: string, serverContent: string}) {
     this.serverElements.push({
       type: 'blueprint',

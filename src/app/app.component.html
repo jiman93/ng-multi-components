@@ -1,18 +1,29 @@
 <div class="container">
+
+  <!-- printing cockpit.component -->
   <app-cockpit
     (serverCreated)="onServerAdded($event)"
     (bpCreated)="onBlueprintAdded($event)"
   ></app-cockpit>
+  <!-- event binding: serverCreated and bpCreated  -->
 
+  <hr>
+  
   <div class="row">
     <div class="col-xs-12">
       <button class="btn btn-primary" (click)="onChangeFirst()">Change First Element Name</button>
+      <!-- click event binding triggering onChangeFirst() -->
+
       <button class="btn btn-danger" (click)="onDestroyFirst()">Destroy First Component</button>
-     
+     <!-- click event binding triggering onDestroyFirst() -->
+
+<!-- printing server-element component -->
       <app-server-element
         *ngFor="let serverElement of serverElements"
         [srvElement]="serverElement"
         [name]="serverElement.name">
+        <!-- Looping through serverElements-->
+
         <p #contentParagraph>
           <strong *ngIf="serverElement.type === 'server'" style="color: red">{{ serverElement.content }}</strong>
           <strong *ngIf="serverElement.type === 'blueprint'">{{ serverElement.content }}</strong>

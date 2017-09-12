@@ -18,13 +18,15 @@ export class CockpitComponent implements OnInit {
     this.serverCreated.emit({
       serverName: nameInput.value,
       serverContent: this.serverContentInput.nativeElement.value
+      // .nativeElement.value used to get CockpitComponent.serverContentInput value from DOM 
     });
   }
 
   onAddBlueprint(nameInput: HTMLInputElement) {
     this.blueprintCreated.emit({
       serverName: nameInput.value,
-      serverContent: this.serverContentInput.nativeElement.value // .nativeElement.value used to get the value from DOM 
+      serverContent: this.serverContentInput.nativeElement.value 
+      // .nativeElement.value used to get CockpitComponent.serverContentInput value from DOM 
     });
   }
 
